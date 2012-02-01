@@ -1,9 +1,9 @@
 var properties = {
 	
 	urls: {
-		showList: "http://applist01.slouis.cloudbees.net/list/",
-		addlist:  "http://applist01.slouis.cloudbees.net/list.json",
-		addItem:  "http://applist01.slouis.cloudbees.net/element/"
+		showList: "http://app01back.bwingu.cloudbees.net/list/",
+		addlist:  "http://app01back.bwingu.cloudbees.net/list.json",
+		addItem:  "http://app01back.bwingu.cloudbees.net/element/"
 		/*
 		showList: "http://localhost:9000/list/",
 		addlist:  "http://localhost:9000/list.json",
