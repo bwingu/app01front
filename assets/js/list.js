@@ -4,13 +4,13 @@ $(function(){
 
 	var errorManager = function(err) {
 		var messageElt = $("#message");
-		messageElt.find("p").html(properties.text[lang].errors[err]);
+		messageElt.find("p").html(B.text("errors", err));
 		messageElt.fadeIn().delay(2000).fadeOut();
 	} 
 	
 	var getList = function(uuid) {
 		
-		$("h1").html(properties.text[lang].misc.load);
+		$("h1").html(B.text("misc", "load"));
 		$.ajax({
 			url: properties.urls.showList + uuid + ".json",
 			dataType: "json",
@@ -28,14 +28,14 @@ $(function(){
 	}
 	
 	var fillMail = function(uuid) {
-		$("#send").find("a").attr("href", "mailto:?subject=" + properties.text[lang].misc.mailSubject + "&body= "+ properties.text[lang].misc.mailSubject + properties.urls.showList + uuid);
+		$("#send").find("a").attr("href", "mailto:?subject=" + B.text("misc", "mailSubject") + "&body= "+ B.text("misc", "mailSubject") + properties.urls.showList + uuid);
 	}
 	
 	var fillList = function(list) {
 		$("h1").html(list.text);
 		var listNameInput = $("#listName");
 		listNameInput.val("");
-		listNameInput.attr("placeholder", properties.text[lang].misc.itemPlaceholder);
+		listNameInput.attr("placeholder", B.text("misc", "itemPlaceholder"));
 		var ul = $("#items").hide();
 		$.each(list.elements, function(){
 			var li = $("<li>").html(this.text);
@@ -64,7 +64,7 @@ $(function(){
 				fillMail(aList.uuid);
 				$("h1").html(listNameInput.val());
 				listNameInput.val("");
-				listNameInput.attr("placeholder", properties.text[lang].misc.itemPlaceholder);
+				listNameInput.attr("placeholder", B.text("misc", "itemPlaceholder"));
 				_this.unbind().submit(addItem);
 			},
 			error: function(data) {
@@ -106,7 +106,7 @@ $(function(){
 	
 	
 	$("#homeBtn").click(function(e) {
-		if(!confirm(properties.text[lang].misc.leave)) {
+		if(!confirm(B.text("misc", "leave"))) {
 			e.preventDefault();
 		}
 	});
@@ -139,18 +139,6 @@ $(function(){
 	
 	
 	// ****** INIT ******
-	
-	
-	$("#message").hide();
-	
-	//Get browser language for texts
-	var lang = "en";
-	if(navigator.language) {
-		lang = navigator.language.substring(0, 2);
-		if(!properties.text[lang]) {
-			lang = "en";
-		} 
-	}
 	
 	//Is there a uuid in the url ?
 	var param = window.location.href.split("?");

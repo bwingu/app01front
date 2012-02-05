@@ -55,6 +55,7 @@ h1 {
 .alert-message {
 	height: 20px;
 	line-height: 20px;
+	display: none;
 }
 
 #listName {
@@ -69,7 +70,6 @@ h1 {
 	float : left;
 	line-height: 36px;
 	text-align: center;
-	margin-left: 21px;
 }
 
 #listName:focus {
@@ -99,7 +99,7 @@ h1 {
     float : left;
 }
 
-input[type="submit"] {
+input[type="submit"].plus {
 	height: 50px;
 	width: 50px;
 }
@@ -204,4 +204,36 @@ footer .btnMenu {
 	border-right-width: 0;
 	border-bottom-width: 0;
 	border-radius: 0;
+}
+
+/* login page */
+
+fieldset {
+	margin: 0;
+}
+
+fieldset legend {
+	padding-left: 0;
+}
+
+fieldset, .hero-unit {
+	margin: 0;
+	padding: 20px;
+}
+
+.row {
+	margin-left: 0;
+}
+
+
+/*manage screen size*/
+
+@media (max-width:600px) {
+	.centered {
+		width: 300px;
+	}
+	
+	#listName {
+		width: 239px;
+	}
 }

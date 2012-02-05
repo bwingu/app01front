@@ -20,6 +20,7 @@ var properties = {
 			},
 			misc: {
 				load: "Loading...",
+				home: "HOME",
 				mailSubject: "Someone share a list with you",
 				mailBody: "Throw your idea here : ",
 				listPlaceholder: "Got a list name ?",
@@ -36,6 +37,7 @@ var properties = {
 			},
 			misc: {
 				load: "Chargement...",
+				home: "ACCUEIL",
 				mailSubject: "Quelqu'un souhaite partager une liste avec vous.",
 				mailBody: "Partagez vous aussi vos idées ici : ",
 				listPlaceholder: "Vous avez un nom de liste ?",
